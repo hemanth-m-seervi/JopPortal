@@ -3,6 +3,8 @@ import User from "../models/User.js";
 
 export const clerkWebhooks = async (req, res) => {
     try {
+        console.log("Headers:", req.headers)      // See if Clerk sent the headers
+    console.log("Body:", req.body)  
         const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
 
         await whook.verify(JSON.stringify(req.body),{
