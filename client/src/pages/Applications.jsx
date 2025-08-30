@@ -71,7 +71,7 @@ const Applications = () => {
             </>
             :<div className='flex gap-2'>
               {userData && userData.resume ? (
-                <a target='_blank' href={userData.resume + '?fl_attachment=false'} className='bg-blue-100 text-blue-600 px-4 py-2 rounded-lg'>Resume</a>
+                <a target='_blank' href={userData.resume} className='bg-blue-100 text-blue-600 px-4 py-2 rounded-lg ' >Resume</a>
               ) : (
                 <span className='bg-blue-100 text-blue-600 px-4 py-2 rounded-lg'>No resume uploaded</span>
               )}
